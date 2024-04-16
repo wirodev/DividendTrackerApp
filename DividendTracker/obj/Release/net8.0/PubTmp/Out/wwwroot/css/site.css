@@ -1,0 +1,170 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #16113A; /* added 2024-04-04 */
+    color: white; /* added 2024-04-04 */
+}
+
+/* Tables */
+table {
+    color: white !important;
+}
+
+table th {
+    color: white;
+}
+
+table tr:nth-child(odd) {
+    background-color: #28254C;
+}
+
+table tr:nth-child(even) {
+    background-color: #1D1B3A;
+}
+
+/* forms */
+.form-control {
+    background-color: #1E1C3A;
+    border: 1px solid #2E2B5F;
+    color: white;
+}
+
+.form-control:focus {
+    border-color: #4E47E5;
+    box-shadow: 0 0 5px rgba(78, 71, 229, 0.25);
+}
+
+/* Overwrite NAV */
+
+.bg-white {
+    background: rgb(2,0,36) !important;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(95,0,254,1) 100%) !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #dee2e6 !important;
+}
+
+.text-dark {
+    --bs-text-opacity: 1;
+    color: #dee2e6 !important;
+}
+
+/* Home Page*/
+.home-container {
+    background-color: #16113A;
+    color: white;
+    height: 100vh;
+    text-align: center;
+}
+
+.home-title {
+    padding-top: 100px;
+}
+
+.home-buttons {
+    margin-top: 50px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    display: block; 
+    width: 80%; 
+    text-align: center;
+    border-radius: 8px; 
+}
+
+.btn-custom-primary, .btn-secondary {
+    background-color: #4e2a84;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    opacity: 0.7;
+}
+
+/* DASHBOARD */
+
+.dashboard-container {
+    background-color: #211761;
+    margin: 0 auto;
+    padding: 50px 0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 20px; 
+    font-size: 3em; 
+    color: white; 
+    text-align: center; 
+}
+
+.metrics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 20px 5% 0 0; 
+    width: 80%;
+}
+
+.metric-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.metric-box {
+    background: rgb(25,22,80);
+    background: linear-gradient(90deg, rgba(25,22,80,1) 0%, rgba(94,50,252,1) 100%);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px; 
+    text-align: center;
+    font-size: 1.3em;
+    flex-grow: 1;
+}
+
+.metric-box.total {
+    background: linear-gradient(90deg, rgba(25,22,80,1) 0%, rgba(94,50,252,1) 100%);
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.metric-box-title {
+    font-weight:bold;
+}
+
+.btn-add-new {
+    width: 200px;
+}

@@ -1,7 +1,15 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\robin\\Desktop\\TU DUblin\\EAD\\CA2\\DividendTrackerApp\\DividendTracker\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8E7201-F4D8-4208-BD69-C308814C9219}|DividendTracker.csproj|c:\\users\\robin\\desktop\\tu dublin\\ead\\ca2\\dividendtrackerapp\\dividendtracker\\controllers\\restfulapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8E7201-F4D8-4208-BD69-C308814C9219}|DividendTracker.csproj|solutionrelative:controllers\\restfulapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7FDC1EB-0DBF-442D-9666-5DA13D3B3126}|..\\DividendTrackerConsoleApp\\DividendTrackerConsoleApp.csproj|c:\\users\\robin\\desktop\\tu dublin\\ead\\ca2\\dividendtrackerapp\\dividendtrackerconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 246,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +30,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RestfulApiController.cs",
+              "DocumentMoniker": "C:\\Users\\robin\\Desktop\\TU DUblin\\EAD\\CA2\\DividendTrackerApp\\DividendTracker\\Controllers\\RestfulApiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RestfulApiController.cs",
+              "ToolTip": "C:\\Users\\robin\\Desktop\\TU DUblin\\EAD\\CA2\\DividendTrackerApp\\DividendTracker\\Controllers\\RestfulApiController.cs",
+              "RelativeToolTip": "Controllers\\RestfulApiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T20:49:49.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\robin\\Desktop\\TU DUblin\\EAD\\CA2\\DividendTrackerApp\\DividendTrackerConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "..\\DividendTrackerConsoleApp\\Program.cs",
+              "ToolTip": "C:\\Users\\robin\\Desktop\\TU DUblin\\EAD\\CA2\\DividendTrackerApp\\DividendTrackerConsoleApp\\Program.cs",
+              "RelativeToolTip": "..\\DividendTrackerConsoleApp\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAwwBQAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T18:22:16.563Z",
+              "EditorCaption": ""
             }
           ]
         }

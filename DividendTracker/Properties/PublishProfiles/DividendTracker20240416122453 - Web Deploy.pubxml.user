@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6CpHkRpdRUONSn8t52OynAAAAAACAAAAAAAQZgAAAAEAACAAAACmBMGjx3v+f811fKkE1p8+/AKb8I0eQ9XuVjuMs1u4fQAAAAAOgAAAAAIAACAAAABJbAZ5te5lQMvJBNp2uXY6Ysl6iuTVWvyWF5AWg2ATWIAAAACOSF6qsEAp3dBulor33tBYt3rYts0UmUEMSVTPNKwcw69C6WOaWy26qpFza5eWi53JN9fQwBUROwRSFzWGmAInk9V0OFe6JT9abhU8/2VRpBwej+fLraDLlA1LkRo7JOezCzUTtUOAyHg0VT+xJIO9SdsIR+96xeTOfn9kK4eyX0AAAABwgxii66hyE9fajlyIII8Zj1bPWXgjn4/mqwPjLskdkAEqDzObYUIKPGVzt5ASSZelUHnWd1UOmD+avJU3WLFq</EncryptedPassword>
+    <History>False|2024-04-16T18:57:18.5148295Z;False|2024-04-16T19:08:17.5440855+01:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=StockDb%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="DividendTracker.Models.ApplicationDbContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=StockDb%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
