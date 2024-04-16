@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tyIhDG1S/mj6+xbG9ItGHkPkbGhCz0bBRqV/2IrlCvtUYGfBNgPPel7XBi6sbfDffo1eimVVq+UDHU5h1Fu64Q==",
+  "dgSpecHash": "PYKiKm9++ibdXQQzjLPG785kS+lmy/pUKx8SgoI3awyPXZ5Z0RIRpJsGSsCzEPUvx8O/5IN/M4nwJQnFecCyjw==",
   "success": true,
   "projectFilePath": "C:\\Users\\robin\\Desktop\\TU DUblin\\EAD\\CA2\\DividendTrackerApp\\DividendTrackerConsoleApp\\DividendTrackerConsoleApp.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\robin\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\robin\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\robin\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\robin\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
     "C:\\Users\\robin\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.3\\microsoft.aspnetcore.authorization.8.0.3.nupkg.sha512",
     "C:\\Users\\robin\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.3\\microsoft.aspnetcore.components.8.0.3.nupkg.sha512",
     "C:\\Users\\robin\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.3\\microsoft.aspnetcore.components.analyzers.8.0.3.nupkg.sha512",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DividendTrackerConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c81e3ec3ade07d9a79d5f44d4c68ec2f8d111ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52617a93f428773ae1081a52f2cf17eac826ebf8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DividendTrackerConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DividendTrackerConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
