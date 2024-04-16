@@ -1,35 +1,44 @@
-﻿using DividendTracker.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using DividendTracker.Models;
+using Newtonsoft.Json;
+using static System.Net.WebRequestMethods;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-        optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=StockDb;Trusted_Connection=True;MultipleActiveResultSets=true");
+        
+        Console.WriteLine("Fetching stock list from API...");
 
-        using (var context = new ApplicationDbContext(optionsBuilder.Options))
+        // Call the API
+        using (var client = new HttpClient())
         {
-            var stocksWithDividends = context.Stocks
-                .Join(context.Dividends,
-                      stock => stock.Ticker,
-                      dividend => dividend.Ticker,
-                      (stock, dividend) => new StockDividendViewModel
-                      {
-                          Ticker = stock.Ticker,
-                          CompanyName = stock.CompanyName,
-                          Sector = stock.Sector,
-                          CurrentStockPrice = dividend.CurrentStockPrice,
-                          DividendAmount = dividend.DividendAmount,
-                          PayoutFrequency = dividend.PayoutFrequency
-                      })
-                .ToList();
+            // api url
+            string apiUrl = "https://dividendtrackeread.azurewebsites.net/api/StocksApi";
+            HttpResponseMessage response = await client.GetAsync(apiUrl);
 
-            Console.WriteLine("Stock List");
-            Console.WriteLine();
-            foreach (var item in stocksWithDividends)
+            // check if response is successful
+            if (response.IsSuccessStatusCode)
             {
-                Console.WriteLine($"{item.Ticker}\t\t{item.CompanyName}\t\t{item.Sector}\t\t{item.CurrentStockPrice}\t\t{item.DividendAmount}\t\t{item.PayoutFrequency}");
+                // read the response and deserialize it
+                string content = await response.Content.ReadAsStringAsync();
+                var stocks = JsonConvert.DeserializeObject<List<Stock>>(content);
+
+                Console.WriteLine("Stock List");
+                Console.WriteLine();
+
+                // print the stock list
+                foreach (var stock in stocks)
+                {
+                    Console.WriteLine($"Ticker: {stock.Ticker}, Company Name: {stock.CompanyName}, Sector: {stock.Sector}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Could not get stock list from API");
             }
         }
     }
