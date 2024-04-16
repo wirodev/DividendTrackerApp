@@ -1,0 +1,51 @@
+﻿@model DashboardModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+
+<div class="dashboard-container">
+    <h2>Your Dividend Income</h2>
+
+    <div class="metrics-container">
+        <div class="metric-row">
+            <div class="metric-box total">
+                <p class="metric-box-title">Total Dividend</p>
+                <p>@Model.TotalDividend.ToString("C")</p>
+            </div>
+        </div>
+
+        <div class="metric-row split">
+            <div class="metric-box">
+                <p class ="metric-box-title">Dividend / Month</p>
+                <p>@((Model.TotalDividend / 12).ToString("C"))</p>
+            </div>
+            <div class="metric-box">
+                <p class ="metric-box-title">Dividend / Week</p>
+                <p>@((Model.TotalDividend / 52).ToString("C"))</p>
+            </div>
+            <div class="metric-box">
+                <p class="metric-box-title">Dividend / Day</p>
+                <p>@((Model.TotalDividend / 365).ToString("C"))</p>
+            </div>
+        </div>
+
+        <div class="metric-row">
+            <div class="metric-box">
+                <p class="metric-box-title">Dividend Yield</p>
+                <p>@Model.TotalDividendYield.ToString("P2")</p>
+            </div>
+            <div class="metric-box">
+                <p class="metric-box-title">Yield on Cost</p>
+                <p>@Model.TotalYieldOnCost.ToString("P2")</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="buttons-container">
+    <a class="btn btn-custom-primary" href="@Url.Action("Index", "Stocks")">Go to the Stock List</a>
+    <a class="btn btn-secondary" href="@Url.Action("UserPortfolio", "Portfolio")">Go to your Portfolio</a>
+</div>
+

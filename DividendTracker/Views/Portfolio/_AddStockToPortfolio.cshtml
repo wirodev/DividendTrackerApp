@@ -1,0 +1,18 @@
+﻿@model DividendTracker.Models.UserPortfolioViewModel
+
+<form asp-action="AddStockToPortfolio" asp-controller="Portfolio" method="post">
+    <input type="hidden" asp-for="Ticker" value="@Model.Ticker" />
+
+    <div>
+        <label asp-for="AverageCostPerShare">Average Cost Per Share</label>
+        <input asp-for="AverageCostPerShare" class="form-control" type="number" step="0.01" required />
+    </div>
+
+    <div>
+        <label asp-for="AmountOfSharesOwned">Amount of Shares Owned</label>
+        <input asp-for="AmountOfSharesOwned" class="form-control" type="number" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Stock</button>
+</form>
+

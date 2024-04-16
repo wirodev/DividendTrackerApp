@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="home-container">
+    <h1 class="display-4 home-title">Welcome to Dividend Tracker</h1>
+    <div class="buttons-container">
+        <a class="btn btn-custom-primary" href="@Url.Action("Index", "Stocks")">Go to the Stock List</a>
+        <a class="btn btn-secondary" href="@Url.Action("UserPortfolio", "Portfolio")">Go to your Portfolio</a>
+    </div>
+</div>

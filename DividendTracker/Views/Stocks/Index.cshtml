@@ -1,0 +1,76 @@
+﻿@model IEnumerable<DividendTracker.Models.StockDividendViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Stock List</h1>
+
+<p>
+    <a class="btn btn-add-new btn-primary" asp-action="Create">Add New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Ticker)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Sector)
+            </th>
+            <th>
+                @Html.DisplayName("Current Stock Price")
+            </th>
+            <th>
+                @Html.DisplayName("Dividend Amount")
+            </th>
+            <th>
+                @Html.DisplayName("Payout Frequency")
+            </th>
+            <th>Actions</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ticker)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sector)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentStockPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DividendAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PayoutFrequency)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Ticker" class="badge badge-warning">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Ticker" class="badge badge-info">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Ticker" class="badge badge-warning">Delete</a>
+                </td>
+                <td>
+                    <!-- AddStockToPortfolio fform -->
+                    <form asp-controller="Portfolio"  asp-action="AddStockToPortfolio" method="post">
+                        <input type="hidden" name="Ticker" value="@item.Ticker" />
+                        <input type="number" name="AverageCostPerShare" class="form-control form-control-sm" step="0.01" placeholder="Cost per share" required />
+                        <input type="number" name="AmountOfSharesOwned" class="form-control form-control-sm" placeholder="Shares" required />
+                        <button type="submit" class="btn btn-success">Add Stock</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

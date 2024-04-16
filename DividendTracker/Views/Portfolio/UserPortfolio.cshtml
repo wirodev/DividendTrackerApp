@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DividendTracker.Models.UserPortfolioViewModel>
+
+@{
+    ViewData["Title"] = "User Portfolio";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ticker</th>
+            <th>Company Name</th>
+            <th>Average Cost Per Share</th>
+            <th>Amount of Shares Owned</th>
+            <th>Dividend</th>
+            <th>Total Dividend</th>
+            <th>Dividend Yield</th>
+            <th>Yield on Cost</th>
+            <th>Actions</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Ticker</td>
+                <td>@item.CompanyName</td>
+                <td>@item.AverageCostPerShare.ToString("C")</td>
+                <td>@item.AmountOfSharesOwned</td>
+                <td>@item.DividendAmount.ToString("C")</td>
+                <td>@item.TotalDividend.ToString("C")</td> 
+                <td>@(item.DividendYield.ToString("P2"))</td>
+                <td>@(item.YieldOnCost.ToString("P2"))</td>
+                <td>
+                    <!-- sell form   -->
+                    <form asp-action="SellStock" asp-controller="Portfolio" method="post">
+                        <input type="hidden" name="Ticker" value="@item.Ticker" />
+                        <input type="number" name="AmountOfSharesToSell" class="form-control form-control-sm" placeholder="Shares" required />
+                        <button type="submit" class="btn btn-warning">Sell</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
